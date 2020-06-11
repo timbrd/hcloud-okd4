@@ -58,3 +58,21 @@ variable "subnet_cidr" {
   description = "CIDR for the subnet"
   default     = "192.168.254.0/24"
 }
+
+variable "server_type_bootstrap" {
+  type        = string
+  description = "Hetzner cloud's server type used for bootstrap node"
+  default     = "cx41"
+}
+
+variable "server_type_master" {
+  type        = string
+  description = "Hetzner cloud's server type used for master nodes"
+  default     = "cx41"
+}
+
+variable "server_type_worker" {
+  type        = string
+  description = "Hetzner cloud's server type used for worker nodes"
+  default     = "cx41"
+}
