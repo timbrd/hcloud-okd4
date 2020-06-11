@@ -42,7 +42,7 @@
       {
         "name": "set-hostname-firstboot.service",
         "enabled": true,
-        "contents": "[Unit]\nConditionFirstBoot=yes\n[Service]\nType=idle\nExecStart=/usr/bin/hostnamectl set-hostname ${hostname}\n[Install]\nWantedBy=multi-user.target\n",
+        "contents": "[Unit]\nConditionFirstBoot=yes\n[Service]\nType=idle\nExecStart=/usr/bin/hostnamectl set-hostname ${hostname}\n[Install]\nWantedBy=multi-user.target\n"
       }
     ]
   }
