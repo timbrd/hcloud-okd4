@@ -43,11 +43,6 @@
         "name": "set-hostname-firstboot.service",
         "enabled": true,
         "contents": "[Unit]\nConditionFirstBoot=yes\n[Service]\nType=idle\nExecStart=/usr/bin/hostnamectl set-hostname ${hostname}\n[Install]\nWantedBy=multi-user.target\n",
-      },
-      {
-        "name": "set-nameservers.service",
-        "enabled": true,
-        "contents: "[Unit]\nDescription=set-nameservers\nAfter=network-online.target\n\n[Service]\nType=oneshot\n\nExecStart=/bin/bash -c 'echo \"[main]\\ndns=none\" > /etc/NetworkManager/conf.d/90-dns-none.conf; rm -f /etc/resolv.conf; echo \"search os.bordemann.com\\nnameserver 1.1.1.1\\nnameserver 1.0.0.1\" > /etc/resolv.conf; /usr/bin/systemctl reload NetworkManager'\n\n[Install]\nWantedBy=multi-user.target\n"
       }
     ]
   }
