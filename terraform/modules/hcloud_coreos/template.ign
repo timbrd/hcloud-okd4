@@ -33,7 +33,7 @@
           "source": "data:text/plain;charset=utf-8;base64,${hostname_b64}",
           "verification": {}
         },
-        "mode": 420,
+        "mode": 420
       }
     ]
   },
