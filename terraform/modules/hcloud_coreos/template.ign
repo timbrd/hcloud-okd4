@@ -59,7 +59,7 @@
         "name": "set-nameservers.service",
         "enabled": true,
         "contents: {
-          "source": "data:text/plain;charset=utf-8;base64,W1NlcnZpY2VdClR5cGU9b25lc2hvdApFeGVjU3RhcnQ9L2Jpbi9iYXNoIC1jICdybSAtZiAvZXRjL3Jlc29sdi5jb25mOyBlY2hvIC1lICJzZWFyY2ggb3MuYm9yZGVtYW5uLmNvbQpuYW1lc2VydmVyPTEuMS4xLjEKbmFtZXNlcnZlcj0xLjAuMC4xIiA+IC9ldGMvcmVzb2x2LmNvbmY7IC91c3IvYmluL3N5c3RlbWN0bCByZWxvYWQgTmV0d29ya01hbmFnZXInCgpbSW5zdGFsbF0KV2FudGVkQnk9bXVsdGktdXNlci50YXJnZXQ=",
+          "source": "data:text/plain;charset=utf-8;base64,W1NlcnZpY2VdClR5cGU9b25lc2hvdAoKRXhlY1N0YXJ0PS9iaW4vYmFzaCAtYyAncm0gLWYgL2V0Yy9yZXNvbHYuY29uZjsgZWNobyAtZSAic2VhcmNoIG9zLmJvcmRlbWFubi5jb20KbmFtZXNlcnZlciAxLjEuMS4xCm5hbWVzZXJ2ZXIgMS4wLjAuMSIgPiAvZXRjL3Jlc29sdi5jb25mOyAvdXNyL2Jpbi9zeXN0ZW1jdGwgcmVsb2FkIE5ldHdvcmtNYW5hZ2VyJwoKW0luc3RhbGxdCldhbnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0Cg==",
           "verification": {}
         }
       }
