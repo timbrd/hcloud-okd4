@@ -65,7 +65,16 @@
         "contents": "[Unit]\nConditionFirstBoot=yes\n[Service]\nType=idle\nExecStart=/usr/bin/hostnamectl set-hostname ${hostname}\n[Install]\nWantedBy=multi-user.target\n",
         "enabled": true,
         "name": "set-hostname-firstboot.service"
-      }
+      },
+    - name: restart-network.service
+      enabled: true
+      contents: |
+        [Service]
+        Type=oneshot
+        ExecStart=/bin/bash -c '/usr/bin/systemctl restart NetworkManager'
+
+        [Install]
+        WantedBy=multi-user.target
     ]
   }
 }
