@@ -48,7 +48,7 @@
         "name": "set-nameservers.service",
         "enabled": true,
         "contents: {
-          "source": "data:text/plain;charset=utf-8;base64,W1VuaXRdCkRlc2NyaXB0aW9uPXNldC1uYW1lc2VydmVycwpBZnRlcj1uZXR3b3JrLW9ubGluZS50YXJnZXQKW1NlcnZpY2VdClR5cGU9b25lc2hvdAoKRXhlY1N0YXJ0PS9iaW4vYmFzaCAtYyAnZWNobyAiW21haW5dXG5kbnM9bm9uZSIgPiAvZXRjL05ldHdvcmtNYW5hZ2VyL2NvbmYuZC85MC1kbnMtbm9uZS5jb25mOyBybSAtZiAvZXRjL3Jlc29sdi5jb25mOyBlY2hvIC1lICJzZWFyY2ggb3MuYm9yZGVtYW5uLmNvbVxubmFtZXNlcnZlciAxLjEuMS4xXG5uYW1lc2VydmVyIDEuMC4wLjEiID4gL2V0Yy9yZXNvbHYuY29uZjsgL3Vzci9iaW4vc3lzdGVtY3RsIHJlbG9hZCBOZXR3b3JrTWFuYWdlcicKCltJbnN0YWxsXQpXYW50ZWRCeT1tdWx0aS11c2VyLnRhcmdldAo=",
+          "source": "data:text/plain;charset=utf-8;base64,W1VuaXRdXG5EZXNjcmlwdGlvbj1zZXQtbmFtZXNlcnZlcnNcbkFmdGVyPW5ldHdvcmstb25saW5lLnRhcmdldFxuXG5bU2VydmljZV1cblR5cGU9b25lc2hvdFxuXG5FeGVjU3RhcnQ9L2Jpbi9iYXNoIC1jICdlY2hvIC1lICJbbWFpbl1cXG5kbnM9bm9uZSIgPiAvZXRjL05ldHdvcmtNYW5hZ2VyL2NvbmYuZC85MC1kbnMtbm9uZS5jb25mOyBybSAtZiAvZXRjL3Jlc29sdi5jb25mOyBlY2hvIC1lICJzZWFyY2ggb3MuYm9yZGVtYW5uLmNvbVxcbm5hbWVzZXJ2ZXIgMS4xLjEuMVxcbm5hbWVzZXJ2ZXIgMS4wLjAuMSIgPiAvZXRjL3Jlc29sdi5jb25mOyAvdXNyL2Jpbi9zeXN0ZW1jdGwgcmVsb2FkIE5ldHdvcmtNYW5hZ2VyJ1xuXG5bSW5zdGFsbF1cbldhbnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0XG4=",
           "verification" : {}
         }
       }
