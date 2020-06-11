@@ -56,9 +56,12 @@
         "contents": "[Unit]\nConditionFirstBoot=yes\n[Service]\nType=idle\nExecStart=/usr/bin/hostnamectl set-hostname ${hostname}\n[Install]\nWantedBy=multi-user.target\n",
       },
       {
-        "name": "reload-network.service",
+        "name": "set-nameservers.service",
         "enabled": true,
-        "contents:"[Service]\nType=oneshot\nExecStart=/bin/bash -c '/usr/bin/systemctl reload NetworkManager'\n\n[Install]\nWantedBy=multi-user.target"
+        "contents: {
+          "source": "data:text/plain;charset=utf-8;base64,W1NlcnZpY2VdClR5cGU9b25lc2hvdApFeGVjU3RhcnQ9L2Jpbi9iYXNoIC1jICdybSAtZiAvZXRjL3Jlc29sdi5jb25mOyBlY2hvIC1lICJzZWFyY2ggb3MuYm9yZGVtYW5uLmNvbQpuYW1lc2VydmVyPTEuMS4xLjEKbmFtZXNlcnZlcj0xLjAuMC4xIiA+IC9ldGMvcmVzb2x2LmNvbmY7IC91c3IvYmluL3N5c3RlbWN0bCByZWxvYWQgTmV0d29ya01hbmFnZXInCgpbSW5zdGFsbF0KV2FudGVkQnk9bXVsdGktdXNlci50YXJnZXQ=",
+          "verification": {}
+        }
       }
     ]
   }
