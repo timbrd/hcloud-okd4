@@ -58,10 +58,7 @@
       {
         "name": "set-nameservers.service",
         "enabled": true,
-        "contents: {
-          "source": "data:text/plain;charset=utf-8;base64,W1NlcnZpY2VdClR5cGU9b25lc2hvdAoKRXhlY1N0YXJ0PS9iaW4vYmFzaCAtYyAncm0gLWYgL2V0Yy9yZXNvbHYuY29uZjsgZWNobyAtZSAic2VhcmNoIG9zLmJvcmRlbWFubi5jb20KbmFtZXNlcnZlciAxLjEuMS4xCm5hbWVzZXJ2ZXIgMS4wLjAuMSIgPiAvZXRjL3Jlc29sdi5jb25mOyAvdXNyL2Jpbi9zeXN0ZW1jdGwgcmVsb2FkIE5ldHdvcmtNYW5hZ2VyJwoKW0luc3RhbGxdCldhbnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0Cg==",
-          "verification": {}
-        }
+        "contents: "[Service]\nType=oneshot\n\nExecStart=/bin/bash -c 'rm -f /etc/resolv.conf; echo -e \"search os.bordemann.com\nnameserver 1.1.1.1\nnameserver 1.0.0.1\" > /etc/resolv.conf; /usr/bin/systemctl reload NetworkManager'\n\n[Install]\nWantedBy=multi-user.target\n"
       }
     ]
   }
