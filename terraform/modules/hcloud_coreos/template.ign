@@ -47,10 +47,7 @@
       {
         "name": "set-nameservers.service",
         "enabled": true,
-        "contents: {
-          "source": "data:text/plain;charset=utf-8;base64,W1VuaXRdXG5EZXNjcmlwdGlvbj1zZXQtbmFtZXNlcnZlcnNcbkFmdGVyPW5ldHdvcmstb25saW5lLnRhcmdldFxuXG5bU2VydmljZV1cblR5cGU9b25lc2hvdFxuXG5FeGVjU3RhcnQ9L2Jpbi9iYXNoIC1jICdlY2hvIC1lICJbbWFpbl1cXG5kbnM9bm9uZSIgPiAvZXRjL05ldHdvcmtNYW5hZ2VyL2NvbmYuZC85MC1kbnMtbm9uZS5jb25mOyBybSAtZiAvZXRjL3Jlc29sdi5jb25mOyBlY2hvIC1lICJzZWFyY2ggb3MuYm9yZGVtYW5uLmNvbVxcbm5hbWVzZXJ2ZXIgMS4xLjEuMVxcbm5hbWVzZXJ2ZXIgMS4wLjAuMSIgPiAvZXRjL3Jlc29sdi5jb25mOyAvdXNyL2Jpbi9zeXN0ZW1jdGwgcmVsb2FkIE5ldHdvcmtNYW5hZ2VyJ1xuXG5bSW5zdGFsbF1cbldhbnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0XG4=",
-          "verification" : {}
-        }
+        "contents: "[Unit]\nDescription=set-nameservers\nAfter=network-online.target\n\n[Service]\nType=oneshot\n\nExecStart=/bin/bash -c 'echo -e \"[main]\\ndns=none\" > /etc/NetworkManager/conf.d/90-dns-none.conf; rm -f /etc/resolv.conf; echo -e \"search os.bordemann.com\\nnameserver 1.1.1.1\\nnameserver 1.0.0.1\" > /etc/resolv.conf; /usr/bin/systemctl reload NetworkManager'\n\n[Install]\nWantedBy=multi-user.target\n"
       }
     ]
   }
