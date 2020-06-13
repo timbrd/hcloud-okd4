@@ -2,6 +2,7 @@ module "ignition" {
   source         = "./modules/hcloud_instance"
   instance_count = var.bootstrap == true ? 1 : 0
   name           = "ignition"
+  location       = var.location
   dns_domain     = var.dns_domain
   dns_zone_id    = var.dns_zone_id
   image          = "ubuntu-20.04"
@@ -15,7 +16,8 @@ module "bootstrap" {
   source          = "./modules/hcloud_coreos"
   instance_count  = var.bootstrap == true ? 1 : 0
   name            = "bootstrap"
-  dns_domain      = var.dns_domain
+  location        = var.location
+  dns_domain     = var.dns_domain
   dns_zone_id     = var.dns_zone_id
   dns_internal_ip = true
   image           = data.hcloud_image.image.id
@@ -28,7 +30,8 @@ module "master" {
   source          = "./modules/hcloud_coreos"
   instance_count  = var.replicas_master
   name            = "master"
-  dns_domain      = var.dns_domain
+  location        = var.location
+  dns_domain     = var.dns_domain
   dns_zone_id     = var.dns_zone_id
   dns_internal_ip = true
   image           = data.hcloud_image.image.id
@@ -42,7 +45,8 @@ module "worker" {
   source          = "./modules/hcloud_coreos"
   instance_count  = var.replicas_worker
   name            = "worker"
-  dns_domain      = var.dns_domain
+  location        = var.location
+  dns_domain     = var.dns_domain
   dns_zone_id     = var.dns_zone_id
   dns_internal_ip = true
   image           = data.hcloud_image.image.id
@@ -56,6 +60,7 @@ module "haproxy" {
   source         = "./modules/hcloud_instance"
   instance_count = var.replicas_haproxy
   name           = "lb"
+  location       = var.location
   dns_domain     = var.dns_domain
   dns_zone_id    = var.dns_zone_id
   image          = "ubuntu-20.04"
