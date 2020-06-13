@@ -76,3 +76,9 @@ variable "server_type_worker" {
   description = "Hetzner cloud's server type used for worker nodes"
   default     = "cx41"
 }
+
+variable "location" {
+  type        = string
+  description = "The location name to create the server in. nbg1, fsn1 or hel1"
+  default     = "nbg1"
+}
